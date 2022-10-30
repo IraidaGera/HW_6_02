@@ -7,99 +7,100 @@
     <title>Forms</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-   
-            <fieldset class="container">
-                <legend>Загальні данні</legend>
-                <label for="blocked">Заблоковане поле</label>
-                <input type="text" name="blocked" id="blocked" placeholder="Мене не можна змінювати" disabled >
-                <label for="some-text">Якийсь текст</label>
-                <input type="text" name="readonly" id="some-text" placeholder="Мене лише читати" readonly>
-                <label for="animal">Ім'я тваринки</label><span>*</span>
-                <input type="text" name="ranimal" id="animal" placeholder="кіт Бегемот" required>
-                <label for="email">Email</label>
-                <input type="email" name="email-1" id="email" placeholder="ivanov@domail.com">
-                <label for="password">Таємний пароль</label>
-                <input type="password" name="pssword-2" id="password">
-                <label for="date">Дата народження Франка</label>
-                <input type="date" name="birth" id="date" placeholder="дд.мм.рррр">
-                <label for="age">Вік дерева</label>
-                <input type="number" name="age" id="age" max="100">
-                <ul>
-                    <label for="female">Стать
-                        <li> <input type="radio" name="gender" value="female" id="female" checked> жіноча </li>
-                    </label>    
-                    <label for="male">
-                        <li> <input type="radio" name="gender" value="male" id="male"> чоловіча </li>
-                    </label>  
-                </ul>
-                
-                    <legend name="media">Соціальні мережі </legend>
-                    
-                    <input type="checkbox" name="fb[]" id="fb" >
-                    <label for="fb">Facebook</label>
-                    <input type="checkbox" name="insta[]" id="insta" >
-                    <label for="insta">Instagramm</label>
-                    <input type="checkbox" name="twit[]" id="twit" >
-                    <label for="twit">Twitter</label>
-                    <input type="checkbox" name="drible[]" id="drible" >
-                    <label for="twit">Dribble</label>
-               
-                
-            </fieldset>
-    
-            <fieldset class="container">
-                <legend>Інша інформація</legend>
-                <label for="color">Улюблений колір сусіда</label>
-                <input type="color" name="color" id="color">
-                <legend>Телефон підтримки розробників</legend>
-                <input type="tel" name="tel" value="38-000-000-00-00">
-                <label for="time">Час наступного заняття</label>
-                <input type="time" name="klass" id="time">
-                <label for="link">Посилання на улюблений сайт</label>
-                <input type="url" name="url" value="https://www.google.com/" id="link">
-                <label for="range">Число від 1 до 10</label>
-                <input type="range" name="range" value="10" min="1" max="10"  id="range">
-                <label for="foto">Завантаж картинку</label>
-                <input type="file" name="download" value="https://www.google.com/" id="link">
-            </fieldset>
-    
-            <fieldset class="container">
-                <legend>Не input-и</legend>
-                <label for="select[]" multiple>Улюблений напій</label>
-                <select name="no-input" id="select">
-                    <option value="1">Узвар</option>
-                    <option value="2">Кава</option>
-                    <option value="3">Текіла</option>
-                </select>
-                <label for="drinks">Улюблений напій</label>
-                <select name="drinks[]" id="drinks" multiple>
-                    <optgroup label="Безалкогольні">
-                        <option>Кава</option>
-                        <option>Узвар</option>
-                        <option>Сок</option> 
-                    </optgroup>
-                    <optgroup label="Бухлішко">
-                       <option>Пиво</option>
-                       <option>Вино</option>
-                       <option>Ром</option>
-                       <option>Текіла</option>
-                    </optgroup>  
-                </select>
-                <label for="">Коментар на вільну тему</label>
-                <textarea name="any" id="any" cols="50" rows="6" <!-- with:50px; hights:40px; --!> </textarea>
-            </fieldset>
-                <fieldset class="container">
-                    <legend>Кнопки</legend>
-                    <button type="submit">Відправити</button>
-                    <button type="reset">Скинути</button>
-                    <button type="button">Просто кнопка</button>
-                    <button type="button" disabled>Я заблокована</button>
-                </fieldset>
-        </form>
-    </div>
-    
-    
 
+<body>
+    <form method="post">  
+        <fieldset class="container">
+            <legend>Загальні данні</legend>
+            <label for="blocked">Заблоковане поле</label>
+            <input type="text" name="blocked" id="blocked" placeholder="Мене не можна змінювати" disabled >
+            <label for="some-text">Якийсь текст</label>
+            <input type="text" name="readonly" id="some-text" placeholder="Мене лише читати" readonly>
+            <label for="animal">Ім'я тваринки</label><span>*</span>
+            <input type="text" name="ranimal" id="animal" placeholder="кіт Бегемот" required>
+            <label for="email">Email</label>
+            <input type="email" name="email-1" id="email" placeholder="ivanov@domail.com">
+            <label for="password">Таємний пароль</label>
+            <input type="password" name="pssword-2" id="password">
+            <label for="date">Дата народження Франка</label>
+            <input type="date" name="birth" id="date">
+            <label for="age">Вік дерева</label>
+            <input type="number" name="age" id="age" max="100">
+            
+            <ul>
+                <li>
+                    <label for="female">Стать 
+                        <input type="radio" name="gender" value="female" id="female" checked> жіноча 
+                    </label>
+                </li>
+                <li>
+                    <label for="male"> 
+                        <input type="radio" name="gender" value="male" id="male"> чоловіча
+                    </label>
+                </li>
+            </ul>
+                <p>Соціальні мережі</p>
+                <input type="checkbox" name="fb[]" id="fb" >
+                <label for="fb">Facebook</label>
+                <input type="checkbox" name="insta[]" id="insta" >
+                <label for="insta">Instagramm</label>
+                <input type="checkbox" name="twit[]" id="twit" >
+                <label for="twit">Twitter</label>
+                <input type="checkbox" name="drible[]" id="drible" >
+                <label for="twit">Dribble</label>
+        </fieldset>
+
+        <fieldset class="container">
+            <p>Інша інформація</p>
+            <label for="color">Улюблений колір сусіда</label>
+            <input type="color" name="color" id="color">
+            <p>Телефон підтримки розробників</p>
+            <input type="tel" name="tel" value="38-000-000-00-00">
+            <label for="time">Час наступного заняття</label>
+            <input type="time" name="klass" id="time">
+            <label for="link1">Посилання на улюблений сайт</label>
+            <input type="url" name="url" value="https://www.google.com/" id="link1">
+            <label for="range">Число від 1 до 10</label>
+            <input type="range" name="range" value="10" min="1" max="10"  id="range">
+            <label for="download">Завантаж картинку</label>
+            <input type="file" name="download" id="download">
+        </fieldset>
+
+        <fieldset class="container">
+            <legend>Не input-и</legend>
+            <label for="select" >Улюблений напій</label>
+            <select name="no-input[]" id="select" multiple>
+                <option value="1">Узвар</option>
+                <option value="2">Кава</option>
+                <option value="3">Текіла</option>
+            </select>
+            <label for="drinks">Улюблений напій</label>
+            <select name="drinks[]" id="drinks" multiple>
+                <optgroup label="Безалкогольні">
+                    <option>Кава</option>
+                    <option>Узвар</option>
+                    <option>Сок</option> 
+                </optgroup>
+
+                <optgroup label="Бухлішко">
+                <option>Пиво</option>
+                <option>Вино</option>
+                <option>Ром</option>
+                <option>Текіла</option>
+                </optgroup>  
+            </select>
+            <label for="any">Коментар на вільну тему</label>
+            <textarea name="any" id="any" cols="50" rows="6">  </textarea>
+        </fieldset>
+
+        <fieldset class="container">
+            <legend>Кнопки</legend>
+            <button type="submit">Відправити</button>
+            <button type="reset">Скинути</button>
+            <button type="button">Просто кнопка</button>
+            <button type="button" disabled>Я заблокована</button>
+        </fieldset>
+    </form>     
 </body>
 </html>
+                    
